@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color : red;
+    color : white;
+    height : 100px;
+    width : 200px;
+    font-size: 30px;
+}
+
+.click-me{
+    background-color: rgb(81, 81, 138);
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(81,81,138,0.15);
+}
+
+.click-me:hover{
+    opacity : 0.8
+}
+
+.title {
+
+    font-size : 30px;
+    font-weight : bold;
+    line-height : 20px
+}
+
+.link {
+    font-size: 20px;
+    font-weight : bold;
+    text-decoration:none;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.monkey{
+    height: 200px;
+    display:inline-flex;
+}
+
