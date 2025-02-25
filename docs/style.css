@@ -1,48 +1,107 @@
+head {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
-    background-color : red;
-    color : white;
-    height : 100px;
-    width : 200px;
-    font-size: 30px;
+h3{
+    margin: 10px;
 }
 
-.click-me{
-    background-color: rgb(81, 81, 138);
-    height: 100px;
-    width: 200px;
-    font-size: 30px;
-    transition: opacity 0.2s;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(81,81,138,0.15);
-}
+h4{
+    margin: 5px;
+    text-align: center;
 
-.click-me:hover{
-    opacity : 0.8
 }
 
 .title {
-
     font-size : 30px;
     font-weight : bold;
     line-height : 20px
 }
 
-.link {
-    font-size: 20px;
-    font-weight : bold;
-    text-decoration:none;
+.welcome-box{
+    color : rgb(236, 234, 234);
+    line-height: 20px;
+    background-color: hsl(240, 46%, 31%);
+    padding:10px;
+    width:450px;
+    height:50%;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
 }
 
-.link:hover{
+.card {
+    color: rgb(236, 234, 234);
+    line-height: 20px;
+    background-color: hsl(240, 46%, 31%);
+    padding: 10px;
+    width: 450px;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+.card-organize{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-description{
+    width: 50%;
+    font-size:16px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about-image {
+    height: 200px;
+    display: inline-flex;
+    align-items:center;
+    padding-left: 5%;
+    padding-right: 10%;
+    border-radius : 10px;
+    padding-top: 5px;
+}
+
+.link {
+    color : hsl(240, 80%, 80%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover {
     text-decoration: underline;
 }
 
-.monkey{
-    height: 200px;
-    display:inline-flex;
+.link_button {
+    background-color : hsl(240, 62%, 90%);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.project{ 
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.button-symbols{
+    height: 20px;
+    align-items: center;
+}
+
+.button-text{
+    font-size: 16px;
+    align-items: center;
 }
 
