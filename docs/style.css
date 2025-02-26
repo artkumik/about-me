@@ -12,6 +12,7 @@ body{
 
 h3{
     margin: 10px;
+    
 }
 
 h4{
@@ -36,7 +37,7 @@ h4{
     height: auto;
     margin: auto;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .card {
@@ -49,7 +50,7 @@ h4{
     height: auto;
     margin: auto;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .card-organize{
@@ -62,20 +63,21 @@ h4{
     width: 50%;
     font-size:16px;
     text-align: left;
-    padding-left: 5%;
     padding-right: 5%;
+    background-color: hsl(240, 35%, 42%);
+    border-radius: 10px;
 }
 
 .about-image {
-    height: 150px;
+    height: 175px;
     display: inline-flex;
     align-items:center;
     border-radius : 50px;
-    padding:10%
+    padding:10%;
 }
 
 .link {
-    color : hsl(240, 80%, 80%);
+    color : hsl(240, 96%, 83%);
     font-weight: bold;
     text-decoration: none;
 }
@@ -85,18 +87,30 @@ h4{
 }
 
 .link_button {
-    background-color : hsl(240, 62%, 90%);
+    background-color: hsl(240, 80%, 80%);
     display: inline-flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.project-title{
+    font-weight: bold;
 }
 
 .project{ 
     flex: 1;
     min-width: 200px;
     text-align: left;
+    background-color: hsl(240, 35%, 42%);
+    padding : 4px;
+    border-radius: 10px;
+}
+
+.project-image{
+    height : 90%;
+    max-height : 200px
 }
 
 .button-symbols{
@@ -108,4 +122,3 @@ h4{
     font-size: 16px;
     align-items: center;
 }
-
