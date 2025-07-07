@@ -7,6 +7,6 @@ function downloadFile() {
     document.body.removeChild(link);
 }
 
-function openResumeInNewWindow() {
-    window.open('/about-me/docs/files/resume.pdf', '_blank');
-}
+function openResume() {
+        window.open('https://artkumik.github.io/about-me/docs/files/resume.pdf', '_blank');
+    }
