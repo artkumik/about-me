@@ -89,7 +89,7 @@ h4{
     background-color: hsl(240, 80%, 80%);
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -115,11 +115,11 @@ h4{
 }
 
 .button-symbols{
-    height: 30px;
+    height: 18px;
     align-items: center;
 }
 
 .button-text{
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
 }
