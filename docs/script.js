@@ -8,5 +8,5 @@ function downloadFile() {
 }
 
 function openResumeInNewWindow() {
-    window.open('username.github.io/folder/document.pdf', '_blank');
+    window.open('artkumik.github.io/about-me/docs/files/resume.pdf', '_blank');
 }
