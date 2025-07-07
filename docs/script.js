@@ -8,5 +8,5 @@ function downloadFile() {
 }
 
 function openResumeInNewWindow() {
-    window.open('/docs/files/resume.pdf', '_blank');
+    window.open('username.github.io/folder/document.pdf', '_blank');
 }
