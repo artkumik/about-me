@@ -6,3 +6,7 @@ function downloadFile() {
     link.click();
     document.body.removeChild(link);
 }
+
+function openResumeInNewWindow() {
+    window.open('/docs/files/resume.pdf', '_blank');
+}
