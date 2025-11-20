@@ -138,6 +138,14 @@ h4 {
     flex-wrap: wrap;
 }
 
+.publication-organize {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
 .about-description {
     background-color: rgb(210, 210, 220);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
@@ -153,6 +161,14 @@ h4 {
     display: flex;
     max-width: 150px;
     border-radius: 60px;
+    align-items: center;
+}
+
+.publication-image {
+    display: flex;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
     align-items: center;
 }
 
@@ -242,7 +258,7 @@ h4 {
     color: rgb(255, 255, 255)
 }
 
-.version{
-    align-items:center;
-    font-size:14px;
+.version {
+    align-items: center;
+    font-size: 14px;
 }
