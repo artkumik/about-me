@@ -1,23 +1,25 @@
 function downloadFile() {
     const link = document.createElement("a");
-    link.href = "files/resume.pdf"; // Replace with the actual file URL
-    link.download = "ResumeAK.pdf"; // Name of the downloaded file
+    link.href = "files/resume.pdf";
+    link.download = "ResumeAK.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }
 
 function openResume() {
-        window.open('https://artkumik.github.io/about-me/docs/files/resume.pdf', '_blank');
+    window.open('https://artkumik.github.io/about-me/docs/files/resume.pdf', '_blank');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
-    const html = document.html;
 
-    // Check for saved theme preference or default to light mode
+    if (!darkModeToggle || !themeIcon) {
+        return;
+    }
+
     const currentTheme = localStorage.getItem('theme') || 'light';
     
     if (currentTheme === 'dark') {
@@ -30,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('dark-mode');
         document.documentElement.classList.toggle('dark-mode');
         
-        // Change icon and save preference
         if (body.classList.contains('dark-mode')) {
             themeIcon.src = 'images/icons/sun.png';
             localStorage.setItem('theme', 'dark');
@@ -39,4 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', 'light');
         }
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDarkMode);
+} else {
+    initDarkMode();
+}
+
+window.addEventListener('load', initDarkMode);
