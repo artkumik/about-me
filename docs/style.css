@@ -1,40 +1,114 @@
-html{
-    background-color: rgb(#F8F8FF);
+html {
+    background-color: #E0E0E8;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #6B6BBF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background-color: #32326F;
+}
+
+.dark-mode-toggle img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+html.dark-mode {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .card {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .about-description {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+.dark-mode .project {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+.dark-mode .button-card {
+    background-color: #4a3a5a;
+}
+
+.dark-mode h3 {
+    color: #9bb5ff;
+}
+
+.dark-mode h4 {
+    color: #e0e0e0;
+}
+
+.dark-mode .project-title {
+    color: #9bb5ff;
+}
+
+.dark-mode .link {
+    color: #4da6ff;
+}
+
+.dark-mode .link:hover {
+    color: #66b3ff;
 }
 
 head {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h3{
+h3 {
     margin: 10px;
-    color:rgb(70, 82, 145);
-    font-weight:bold;
+    color: rgb(50, 62, 125);
+    font-weight: bold;
 }
 
-h4{
+h4 {
     margin: 5px;
 }
 
-
 .title {
-    font-size : 30px;
-    font-weight : bold;
-    line-height : 20px;
-    width : 98% ;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 20px;
+    width: 98%;
     max-width: 450px;
 }
 
-.welcome-box{
-    color : rgb(236, 234, 234);
+.welcome-box {
+    color: rgb(236, 234, 234);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.08);
-    background-color: rgb(255, 255, 255);
-    padding:10px;
+    background-color: rgb(225, 225, 225);
+    padding: 10px;
     width: 90%;
     max-width: 700px;
     height: auto;
@@ -45,7 +119,7 @@ h4{
 
 .card {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(225, 225, 225);
     padding: 10px;
     width: 90%;
     max-width: 700px;
@@ -53,6 +127,7 @@ h4{
     margin: auto;
     text-align: center;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .card-organize {
@@ -64,26 +139,28 @@ h4{
 }
 
 .about-description {
-    background-color: rgb(240, 240, 245);
+    background-color: rgb(210, 210, 220);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
-    color:rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
     font-size: 18px;
     text-align: left;
     border-radius: 10px;
-    padding : 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-image {
     display: flex;
-    max-width : 150px;
+    max-width: 150px;
     border-radius: 60px;
     align-items: center;
 }
 
 .link {
-    color : rgb(#007BFF);
+    color: rgb(0, 100, 200);
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .link:hover {
@@ -92,7 +169,7 @@ h4{
 }
 
 .link_button {
-    background-color: #6B6BBF ;
+    background-color: #6B6BBF;
     color: #FFFFFF;
     display: inline-flex;
     align-items: center;
@@ -106,62 +183,61 @@ h4{
     font-size: 16px;
     font-weight: 550;
     transition: background-color 0.3s ease, transform 0.1s ease;
-
 }
 
-.link_button:hover{
-    background-color:#32326F;
+.link_button:hover {
+    background-color: #32326F;
 }
 
-.project-title{
+.project-title {
     font-weight: bold;
     font-size: 18px;
-    color:rgb(70, 70, 145);
+    color: rgb(50, 50, 125);
+    transition: color 0.3s ease;
 }
 
-.project{ 
-    background-color:rgb(240, 240, 245);
+.project {
+    background-color: rgb(210, 210, 220);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
-    color:rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
     flex: 1;
     font-size: 16px;
     min-width: 200px;
     text-align: left;
-    padding : 4px;
+    padding: 4px;
     border-radius: 10px;
-    
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-image{
-    height : 90%;
-    max-height : 200px
+.project-image {
+    height: 90%;
+    max-height: 200px
 }
 
-.button-card{
+.button-card {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-    background-color: rgb(#e7c2ef);
+    background-color: #d0a2d9;
     padding: 10px;
     width: 90%;
     max-width: 700px;
     height: auto;
     margin: auto;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 10px;
-    gap:5px;
+    gap: 5px;
     flex-wrap: wrap;
+    transition: background-color 0.3s ease;
 }
 
-.button-symbols{
+.button-symbols {
     height: 18px;
     align-items: center;
 }
 
-.button-text{
+.button-text {
     font-size: 18px;
     align-items: center;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255)
 }
-
-
