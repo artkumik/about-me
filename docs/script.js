@@ -14,6 +14,7 @@ function openResume() {
 function setupDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const themeIcon = document.getElementById('themeIcon');
+    
     if (!darkModeToggle || !themeIcon) {
         console.log('Dark mode elements not found');
         return;
@@ -28,9 +29,10 @@ function setupDarkMode() {
         themeIcon.src = 'images/icons/moon.png';
     }
 
-    darkModeToggle.onclick = function() {
+    darkModeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
         document.documentElement.classList.toggle('dark-mode');
+        
         if (document.body.classList.contains('dark-mode')) {
             themeIcon.src = 'images/icons/sun.png';
             localStorage.setItem('theme', 'dark');
@@ -38,7 +40,7 @@ function setupDarkMode() {
             themeIcon.src = 'images/icons/moon.png';
             localStorage.setItem('theme', 'light');
         }
-    };
+    });
 }
 
 function setupSmoothScrolling() {
@@ -52,7 +54,7 @@ function setupSmoothScrolling() {
             
             if (targetSection) {
                 const navbar = document.querySelector('.navbar');
-                const navbarHeight = navbar.offsetHeight;
+                const navbarHeight = navbar ? navbar.offsetHeight : 60;
                 const targetPosition = targetSection.offsetTop - navbarHeight - 20;
                 
                 window.scrollTo({
@@ -69,5 +71,9 @@ function setupPageLoad() {
     setupSmoothScrolling();
 }
 
-document.addEventListener('DOMContentLoaded', setupPageLoad);
-window.addEventListener('load', setupPageLoad);
+// Wait for DOM to be ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupPageLoad);
+} else {
+    setupPageLoad();
+}
