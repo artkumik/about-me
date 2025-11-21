@@ -15,12 +15,30 @@
 </head>
 
 <body>
-    <button id="darkModeToggle" class="dark-mode-toggle">
-        <img id="themeIcon" src="images/icons/moon.png" alt="Toggle Dark Mode">
-    </button>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Artur Kumik</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#publications" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <button id="darkModeToggle" class="dark-mode-toggle-nav">
+                        <img id="themeIcon" src="images/icons/moon.png" alt="Toggle Dark Mode">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <br>
-    <div class="card">
+    <div class="card" id = "about">
         <div class="card-organize">
 
             <div>
@@ -61,7 +79,7 @@
 
     <br>
 
-    <div class="card">
+    <div class="card" id = "publications">
         <h3 class="project-title">Publications</h3>
         <div class="publication-organize">
 
@@ -88,7 +106,7 @@
 
     <br>
 
-    <div class="card">
+    <div class="card" id = "projects">
         <h3 class="project-title">Projects</h3>
 
         <div class="project">
@@ -172,7 +190,7 @@
     </div>
 
     <br>
-    <p class="version">Version 1.0</p>
+    <p class="version">Version 1.1 😶</p>
 
     <script src="script.js"></script>
 </body>

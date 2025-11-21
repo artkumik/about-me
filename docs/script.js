@@ -14,14 +14,12 @@ function openResume() {
 function setupDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const themeIcon = document.getElementById('themeIcon');
-    
     if (!darkModeToggle || !themeIcon) {
         console.log('Dark mode elements not found');
         return;
     }
 
     const currentTheme = localStorage.getItem('theme') || 'light';
-    
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
         document.documentElement.classList.add('dark-mode');
@@ -33,7 +31,6 @@ function setupDarkMode() {
     darkModeToggle.onclick = function() {
         document.body.classList.toggle('dark-mode');
         document.documentElement.classList.toggle('dark-mode');
-        
         if (document.body.classList.contains('dark-mode')) {
             themeIcon.src = 'images/icons/sun.png';
             localStorage.setItem('theme', 'dark');
@@ -44,5 +41,33 @@ function setupDarkMode() {
     };
 }
 
-document.addEventListener('DOMContentLoaded', setupDarkMode);
-window.addEventListener('load', setupDarkMode);
+function setupSmoothScrolling() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const navbar = document.querySelector('.navbar');
+                const navbarHeight = navbar.offsetHeight;
+                const targetPosition = targetSection.offsetTop - navbarHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+function setupPageLoad() {
+    setupDarkMode();
+    setupSmoothScrolling();
+}
+
+document.addEventListener('DOMContentLoaded', setupPageLoad);
+window.addEventListener('load', setupPageLoad);
